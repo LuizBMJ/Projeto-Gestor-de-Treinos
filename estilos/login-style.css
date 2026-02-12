@@ -8,4 +8,104 @@
 
 body {
     background-color: red;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body h1 {
+    font-size: 2em;
+}
+
+body p {
+    font-size: 1.2em;
+}
+
+header {
+    width: 100vw;
+    height: 40px;
+    background-color: white;
+}
+
+nav#imenu {
+    width: 100vw;
+    height: 40px;
+}
+
+nav#imenu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    gap: 15px;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav#imenu ul li a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav#imenu ul li a:hover {
+    color: red;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 40px);
+    justify-content: center;
+    align-items: center
+}
+
+main section {
+    text-align: center;
+    background-color: white;
+    width: 50vw;
+    height: 65vh;
+    border-radius: 5px;
+}
+
+main section h1 {
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 76px);
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.inputs p.user input{
+    width: 95%;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.inputs p.enviar input{
+    width: 95%;
+    height: 30px;
+}
+
+.inputs p.esquecer a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 95%;
+    height: 30px;
+    border: 1px solid black;
+}
+
+section#container-cadastro {
+    display: none;
 }

@@ -11,30 +11,39 @@
 
 <body>
     <header>
-        <div id="container-menu">
-            <nav id="imenu">
-                <ul>
-                    <li class="opções">
-                        <p>Login</p>
-                    </li>
-                    <li class="opções">
-                        <p>Cadastro</p>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <nav id="imenu">
+            <ul>
+                <li class="opções">
+                    <a href="#">Login</a>
+                </li>
+                <li class="opções">
+                    <a href="#">Cadastro</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section>
-            <article>
-                <div id="container-login">
-
-                </div>
+        <section id="container-login">
+            <h1>Login</h1>
+            <article class="inputs">
+                <p class="user">
+                    <input type="text" name="username" id="username" placeholder="Usuário">
+                </p>
+                <p class="user">
+                    <input type="password" name="password" id="password" placeholder="Senha">
+                </p>
+                <p class="enviar">
+                    <input type="submit" value="Acessar">
+                </p>
+                <p class="esquecer">
+                    <a href="#">Esqueci minha senha</a>
+                </p>
             </article>
-            <article>
-                <div id="container-cadastro">
-
-                </div>
+        </section>
+        <section id="container-cadastro">
+            <h1>Cadastro</h1>
+            <article id="inputs-cadastro">
+                
             </article>
         </section>
     </main>

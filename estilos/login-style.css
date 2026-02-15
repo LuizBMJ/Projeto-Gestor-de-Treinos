@@ -35,38 +35,6 @@ body p {
     font-size: 1.2em;
 }
 
-header {
-    width: 100%;
-    height: 40px;
-}
-
-nav#imenu {
-    width: 100%;
-    height: 40px;
-}
-
-nav#imenu ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    height: 40px;
-    gap: 15px;
-    margin-right: 20px;
-    list-style: none;
-}
-
-nav#imenu ul li a {
-    font-weight: bold;
-    color: var(--cor-texto-principal);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav#imenu ul li a:hover {
-    color: var(--cor-branco-suave);
-}
-
 main {
     display: grid;
     grid-template-columns: auto 90% auto;
@@ -121,7 +89,7 @@ section.registros h1 {
     height: calc(100% - 76px);
     gap: 10px;
     padding-top: 10px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .formulario p input {
@@ -162,11 +130,20 @@ section.registros h1 {
     transform: translate(-5px, -8px);
 }
 
-.formulario p.enviar {
-    align-self: flex-start;
+.formulario p.remember-me{
+    display: flex;
+    color: var(--cor-branco-suave);
+    font-size: 0.9em;
+    text-align: center;
+    gap: 5px;
 }
 
-.formulario p.enviar input {
+.formulario p.remember-me input {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.formulario p.send input {
     font-weight: bold;
     color: var(--cor-branco-suave);
     width: 100px;
@@ -177,18 +154,19 @@ section.registros h1 {
     transition: background-color 0.3s ease;
 }
 
-.formulario p.enviar input:hover {
+.formulario p.send input:hover {
     cursor: pointer;
     background-color: var(--cor-botao-hover);
 }
 
-.formulario p.esquecer {
-    align-self: flex-start;
+.formulario p.questions {
+    color: var(--cor-branco-suave);
+    font-size: 0.80em;
+    text-decoration: none;
 }
 
-.formulario p.esquecer a {
+.formulario p.questions a {
     width: 200px;
-    font-size: 0.65em;
     text-decoration: none;
     color: var(--cor-branco-suave);
 }

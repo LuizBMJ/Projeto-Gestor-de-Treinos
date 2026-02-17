@@ -3,12 +3,18 @@
 /* Telas muito pequenas */
 @media screen and (max-width: 360px) {
 
+    main {
+    gap: 20px;
+    }
+
     #container-home h1 {
         font-size: 2.2em;
+        color: var(--cor-texto-principal);
     }
 
     #container-home p {
         font-size: 0.95em;
+        color: var(--cor-texto-secundaria);
     }
 
     .formulario p {
@@ -25,6 +31,8 @@
 
     .registros {
         max-width: 400px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .formulario p {
@@ -36,8 +44,7 @@
 @media screen and (min-width: 1028px) {
 
     body {
-        background: url(../imagens/Background-Media-Query.jpg) no-repeat center center;
-        background-size: cover;
+        color: var(--cor-texto-principal);
     }
 
     main {
@@ -54,10 +61,12 @@
 
     #container-home h1 {
         font-size: 3.6em;
+        color: var(--cor-texto-principal);
     }
 
     #container-home p {
         font-size: 1.1em;
+        color: var(--cor-texto-secundaria);
     }
 
     .registros {
@@ -67,7 +76,7 @@
     }
 
     .registros h1 {
-        color: var(--cor-texto-principal);
+        color: var(--cor-principal);
         font-size: 2.4em;
     }
 
@@ -76,9 +85,12 @@
     }
 
     .formulario p.remember-me,
-    .formulario p.questions,
+    .formulario p.questions {
+        color: var(--cor-texto-secundaria);
+    }
+
     .formulario p.questions a {
-        color: var(--cor-texto-principal);
+        color: var(--cor-principal);
     }
 
     .formulario p.questions {
@@ -87,6 +99,14 @@
 
     .formulario p.send input {
         width: 120px;
+        background-color: var(--cor-principal);
+        color: var(--cor-preto-suave);
+        transition: transform 0.3s ease;
+    }
+
+    .formulario p.send input:hover {
+        transform: scale(1.05);
+        background-color: var(--cor-terciaria);
     }
 }
 
@@ -116,5 +136,6 @@
     .formulario p.send input {
         width: 140px;
         height: 42px;
+        background-color: var(--cor-principal);
     }
 }

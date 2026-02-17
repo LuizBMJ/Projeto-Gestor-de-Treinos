@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Gerenciamento</title>
 
-    <link rel="stylesheet" href="estilos/login-style.css">
-    <link rel="stylesheet" href="estilos/login-media-queries.css">
+    <link rel="stylesheet" href="estilos/registro-style.css">
+    <link rel="stylesheet" href="estilos/registro-media-queries.css">
+
+    <script src="scripts/registro.js"></script>
 </head>
 
 <body>
@@ -32,10 +34,12 @@
                 <p class="user">
                     <input
                         type="text"
-                        name="username"
-                        id="username"
+                        name="login_username"
+                        id="login-username"
                         placeholder="Usuário"
                         autocomplete="username"
+                        minlength="4"
+                        maxlength="20"
                         required
                     >
                 </p>
@@ -43,21 +47,23 @@
                 <p class="user">
                     <input
                         type="password"
-                        name="password"
-                        id="password"
+                        name="login_password"
+                        id="login-password"
                         placeholder="Senha"
                         autocomplete="current-password"
+                        minlength="8"
+                        maxlength="30"
                         required
                     >
                 </p>
 
                 <p class="remember-me">
-                    <input type="checkbox" name="remember" id="remember">
+                    <input type="checkbox" name="remember_me" id="remember">
                     <label for="remember">Lembrar de mim</label>
                 </p>
 
                 <p class="send">
-                    <input type="submit" value="Acessar">
+                    <input type="submit" value="Entrar">
                 </p>
 
                 <p class="questions">
@@ -72,11 +78,70 @@
         <section id="container-cadastro" class="registros" aria-labelledby="titulo-cadastro">
             <h1 id="titulo-cadastro">Cadastro</h1>
 
-            <article id="inputs-cadastro">
-                <!-- Inputs de cadastro futuros -->
-            </article>
-        </section>
+            <form action="cadastro.php" method="POST" class="formulario" autocomplete="on">
 
+                <p class="user">
+                    <input
+                        type="text"
+                        name="register_username"
+                        id="register-username"
+                        placeholder="Usuário"
+                        autocomplete="username"
+                        minlength="4"
+                        maxlength="20"
+                        required
+                    >
+                </p>
+
+                <p class="user">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="register-email"
+                        placeholder="E-mail"
+                        autocomplete="email"
+                        maxlength="40"
+                        required
+                    >
+                </p>
+
+                <p class="user">
+                    <input
+                        type="password"
+                        name="password"
+                        id="register-password"
+                        placeholder="Senha"
+                        autocomplete="new-password"
+                        minlength="8"
+                        maxlength="30"
+                        required
+                    >
+                </p>
+
+                <p class="user">
+                    <input
+                        type="password"
+                        name="confirm_password"
+                        id="register-confirm-password"
+                        placeholder="Confirme sua senha"
+                        autocomplete="new-password"
+                        minlength="8"
+                        maxlength="30"
+                        required
+                    >
+                </p>
+
+                <p class="send">
+                    <input type="submit" value="Cadastrar">
+                </p>
+
+                <p class="questions">
+                    Já possui uma conta?
+                    <a href="#" aria-label="Ir para Login">Login</a>
+                </p>
+
+            </form>
+        </section>
     </main>
 </body>
 

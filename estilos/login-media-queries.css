@@ -1,59 +1,39 @@
 @charset "UTF-8";
 
+/* Telas muito pequenas */
 @media screen and (max-width: 360px) {
 
-    section#container-home h1 {
+    #container-home h1 {
         font-size: 2.2em;
     }
 
-    section#container-home p {
+    #container-home p {
         font-size: 0.95em;
     }
 
-    .formulario p.user {
-        max-width: 260px;
-    }
-
-    .formulario p input,
-    .formulario p a {
+    .formulario p {
         max-width: 260px;
     }
 }
 
+/* Tablets / telas médias */
 @media screen and (min-width: 768px) {
 
-    section#container-home {
-        max-width: 360px;
+    #container-home {
+        max-width: 400px;
     }
 
-    section#container-home h1 {
-        font-size: 3.2em;
+    .registros {
+        max-width: 400px;
     }
 
-    section#container-home p {
-        font-size: 1.05em;
-    }
-
-    .formulario p.user {
-        max-width: 360px;
-    }
-
-    .formulario p input,
-    .formulario p a {
-        max-width: 360px;
+    .formulario p {
+        max-width: 400px;
     }
 }
 
+/* Desktop padrão */
 @media screen and (min-width: 1028px) {
-
-    :root {
-    --cor-texto-principal: #3b2a1d;
-    --cor-branco-suave: #ffebde;
-    --cor-botao: #ff7a1a;
-    --cor-botao-hover: #e66912;
-    --cor-borda-focus: #3b2a1d;
-    --cor-background-overlay: rgba(0, 0, 0, 0.4);
-    }
 
     body {
         background: url(../imagens/Background-Media-Query.jpg) no-repeat center center;
@@ -66,74 +46,71 @@
         align-items: center;
     }
 
-    section#container-home {
-        grid-column: 2;
+    #container-home {
         grid-row: auto;
+        grid-column: 2;
         max-width: 420px;
     }
 
-    section#container-home h1 {
+    #container-home h1 {
         font-size: 3.6em;
     }
 
-    section#container-home p {
+    #container-home p {
         font-size: 1.1em;
     }
 
-    section.registros {
-        grid-column: 3;
+    .registros {
         grid-row: auto;
+        grid-column: 3;
+        max-width: 460px;
     }
 
-    section.registros h1 {
+    .registros h1 {
         color: var(--cor-texto-principal);
         font-size: 2.4em;
     }
 
-    .formulario p.user {
-        max-width: 380px;
+    .formulario p {
+        max-width: 460px;
     }
 
-    .formulario p.remember-me {
+    .formulario p.remember-me,
+    .formulario p.questions,
+    .formulario p.questions a {
         color: var(--cor-texto-principal);
     }
 
-    .formulario p input,
-    .formulario p a {
-        max-width: 380px;
-    }
-
-    .formulario p.user input {
-        height: 40px;
+    .formulario p.questions {
+        font-size: 0.9em;
     }
 
     .formulario p.send input {
         width: 120px;
-        height: 40px;
     }
 }
 
+/* Telas grandes */
 @media screen and (min-width: 1440px) {
 
-    section#container-home {
+    #container-home {
         max-width: 480px;
     }
 
-    section#container-home h1 {
+    #container-home h1 {
         font-size: 4em;
     }
 
-    section#container-home p {
+    #container-home p {
         font-size: 1.2em;
     }
 
-    .formulario p.user {
-        max-width: 420px;
+    .registros {
+        max-width: 560px;
     }
 
-    .formulario p input,
-    .formulario p a {
-        max-width: 420px;
+    .formulario p {
+        max-width: 560px;
     }
 
     .formulario p.send input {
@@ -141,7 +118,3 @@
         height: 42px;
     }
 }
-
-
-
-

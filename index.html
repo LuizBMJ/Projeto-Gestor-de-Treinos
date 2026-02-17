@@ -5,47 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Gerenciamento</title>
-    <link rel="stylesheet" href="estilos/login-style.css" media="all">
-    <link rel="stylesheet" href="estilos/login-media-queries.css" media="screen">
+
+    <link rel="stylesheet" href="estilos/login-style.css">
+    <link rel="stylesheet" href="estilos/login-media-queries.css">
 </head>
 
 <body>
     <main>
-        <section id="container-home">
-                <h1>
-                    Bem vindo de volta!
-                </h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis est, voluptatem, at inventore, quisquam itaque soluta minus aliquam optio nisi provident. Sed est facilis cum non nisi nemo earum vel.</p>
+        <section id="container-home" aria-labelledby="titulo-home">
+            <header>
+                <h1 id="titulo-home">Bem-vindo de volta!</h1>
+            </header>
+
+            <p>
+                Acesse sua conta para continuar gerenciando seus dados com segurança
+                e praticidade no sistema.
+            </p>
         </section>
-        <section id="container-login" class="registros">
-            <h1>Login</h1>
-                <form action="login.php" method="POST" class="formulario">
-                    <p class="user">
-                        <input type="text" name="username" id="username" placeholder="Usuário" required>
-                    </p>
-                    <p class="user">
-                        <input type="password" name="password" id="password" placeholder="Senha" required>
-                    </p>
-                    <p class="remember-me">
-                        <input type="checkbox" name="remember" id="remember">
-                        <label for="remember">Lembrar de mim?</label>
-                    </p>
-                    <p class="send">
-                        <input type="submit" value="Acessar">
-                    </p>
-                    <p class="questions">
-                        <a href="#">Esqueci minha senha</a>
-                        ou
-                        <a href="#">Cadastre-se</a>
-                    </p>
-                </form>
+
+        <!-- Login -->
+        <section id="container-login" class="registros" aria-labelledby="titulo-login">
+            <h1 id="titulo-login">Login</h1>
+
+            <form action="login.php" method="POST" class="formulario" autocomplete="on">
+
+                <p class="user">
+                    <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Usuário"
+                        autocomplete="username"
+                        required
+                    >
+                </p>
+
+                <p class="user">
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Senha"
+                        autocomplete="current-password"
+                        required
+                    >
+                </p>
+
+                <p class="remember-me">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Lembrar de mim</label>
+                </p>
+
+                <p class="send">
+                    <input type="submit" value="Acessar">
+                </p>
+
+                <p class="questions">
+                    <a href="#" aria-label="Recuperar senha">Esqueci minha senha</a>
+                    ou
+                    <a href="#" aria-label="Ir para cadastro">Cadastre-se</a>
+                </p>
+            </form>
         </section>
-        <section id="container-cadastro" class="registros">
-            <h1>Cadastro</h1>
+
+        <!-- Cadastro -->
+        <section id="container-cadastro" class="registros" aria-labelledby="titulo-cadastro">
+            <h1 id="titulo-cadastro">Cadastro</h1>
+
             <article id="inputs-cadastro">
-                
+                <!-- Inputs de cadastro futuros -->
             </article>
         </section>
+
     </main>
 </body>
 

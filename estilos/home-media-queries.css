@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/* Telas muito pequenas */
+@media screen and (max-width: 360px) {
+
+}
+
+/* Tablets / telas médias */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Desktop padrão */
+@media screen and (min-width: 1028px) {
+
+}
+
+/* Telas grandes */
+@media screen and (min-width: 1440px) {
+
+}

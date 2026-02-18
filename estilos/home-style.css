@@ -43,12 +43,6 @@ header {
     z-index: 1;
 }
 
-header h1 {
-    color: var(--cor-texto-principal);
-    font-size: 1.8em;
-    font-weight: 500;
-}
-
 #header-right {
     display: flex;
     align-items: center;
@@ -63,29 +57,27 @@ header h1 {
     gap: 20px;
 }
 
-#menu li a {
-    text-decoration: none;
-    color: var(--cor-texto-secundaria);
-    font-weight: 500;
-    transition: color 0.3s ease;
+.menu-icon {
+    width: 22px;
+    fill: currentColor;
+    transform: translateY(3px);
 }
 
-#menu li a:hover {
+#menu a {
+    color: var(--cor-texto-secundaria);
+}
+
+#menu a:hover {
     color: var(--cor-principal);
 }
+
+
 
 /* Perfil */
 
 #perfil-wrapper {
     position: relative;
 }
-
-#perfil-wrapper:hover #perfil-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
 
 #perfil {
     background-color: var(--cor-principal);
@@ -111,22 +103,21 @@ header h1 {
     top: 60px;
     right: 0;
 
+    padding: 8px;
     background-color: #1a1a1a;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
     width: 160px;
-    padding-top: 15px;
 
     display: flex;
     flex-direction: column;
+    gap: 5px;
 
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.25s ease;
-
     z-index: 10;
-
 }
 
 #perfil-menu::before {
@@ -142,8 +133,8 @@ header h1 {
 
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
 
+}
 
 #perfil-menu a {
     padding: 12px 15px;
@@ -163,8 +154,11 @@ header h1 {
     color: var(--cor-secundaria);
 }
 
-
-
+#perfil-menu.perfil-visibilidade {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
 /* MAIN */
 

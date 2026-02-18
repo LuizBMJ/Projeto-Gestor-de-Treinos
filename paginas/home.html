@@ -4,42 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - GymMax</title>
-    <link rel="stylesheet" href="../estilos/home-style.css" media="all">
-    <link rel="stylesheet" href="../estilos/home-media-queries.css" media="screen">
+
+    <link rel="stylesheet" href="../estilos/home-style.css">
+    <link rel="stylesheet" href="../estilos/home-media-queries.css">
+
+    <script src="../scripts/home.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>
-            Bem vindo(a) <br>
-            Seu nome
-        </h1>
-        
-        <div id="header-right">
-            <nav id="container-menu">
-                <ul id="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Treinos</a></li>
-                    <li><a href="#">Tema</a></li>
-                </ul>
-            </nav>
-            <div id="perfil-wrapper">
-                <div id="perfil">
-                    <img src="../imagens/foto-perfil.png" alt="Perfil">
-                </div>
 
-                <div id="perfil-menu">
-                    <a href="#">Editar perfil</a>
-                    <a href="#" class="logout">Logout</a>
-                </div>
+<header>  
+    <div id="header-left">
+        <h1>Olá Jorge</h1>
+    </div>
+    <div id="header-right">
+        <nav id="container-menu">
+            <ul id="menu">
+
+                <!-- HOME -->
+                <li>
+                    <a href="#">
+                        <svg class="menu-icon" viewBox="0 0 512 512">
+                            <path d="M256,319.841c-35.346,0-64,28.654-64,64v128h128v-128C320,348.495,291.346,319.841,256,319.841z"/>
+                            <path d="M362.667,383.841v128H448c35.346,0,64-28.654,64-64V253.26c0.005-11.083-4.302-21.733-12.011-29.696l-181.29-195.99c-31.988-34.61-85.976-36.735-120.586-4.747c-1.644,1.52-3.228,3.103-4.747,4.747L12.395,223.5C4.453,231.496-0.003,242.31,0,253.58v194.261c0,35.346,28.654,64,64,64h85.333v-128c0.399-58.172,47.366-105.676,104.073-107.044C312.01,275.383,362.22,323.696,362.667,383.841z"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <!-- PESOS -->
+                <li>
+                    <a href="#">
+                        <svg class="menu-icon" viewBox="0 0 24 24">
+                            <path d="m23.121 7.122-2.414-2.415 2-2-1.414-1.414-2 2-2.414-2.414a3 3 0 0 0 -4.243 0l-2.828 2.828 4.535 4.536-6.1 6.1-4.536-4.535-2.828 2.828a3 3 0 0 0 0 4.242l2.414 2.415-2 2 1.414 1.414 2-2 2.414 2.414a3 3 0 0 0 4.243 0l2.828-2.828-4.535-4.536 6.1-6.1 4.535 4.535 2.828-2.828a3 3 0 0 0 0-4.242z"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <!-- LUA -->
+                <li>
+                    <a href="#">
+                        <svg class="menu-icon" viewBox="0 0 24 24">
+                            <path d="M15,24a12.021,12.021,0,0,1-8.914-3.966,11.9,11.9,0,0,1-3.02-9.309A12.122,12.122,0,0,1,13.085.152a13.061,13.061,0,0,1,5.031.205,2.5,2.5,0,0,1,1.108,4.226c-4.56,4.166-4.164,10.644.807,14.41a2.5,2.5,0,0,1-.7,4.32A13.894,13.894,0,0,1,15,24Z"/>
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div id="perfil-wrapper">
+            <div id="perfil" onclick="abrirmenu()">
+                <img src="../imagens/foto-perfil.png" alt="Perfil">
             </div>
 
+            <div id="perfil-menu">
+                <a href="#">Editar perfil</a>
+                <a href="#" class="logout">Logout</a>
+            </div>
         </div>
-    </header>
-    <main>
-        
-    </main>
-    <footer>
 
-    </footer>
+    </div>
+</header>
+
+<main></main>
+<footer></footer>
+
 </body>
 </html>

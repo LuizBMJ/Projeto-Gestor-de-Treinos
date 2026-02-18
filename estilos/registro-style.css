@@ -175,11 +175,6 @@ section {
     transition: background-color 0.3s ease;
 }
 
-.send input:hover {
-    cursor: pointer;
-    background-color: var(--cor-terciaria);
-}
-
 /* Links auxiliares */
 .questions {
     color: var(--cor-texto-secundaria);
@@ -191,11 +186,6 @@ section {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
-.formulario p.questions a:hover {
-    color: var(--cor-terciaria);
-}
-
 
 /* Cadastro oculto */
 #container-cadastro {

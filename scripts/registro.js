@@ -19,3 +19,24 @@ function trocar_registro() {
         texto.innerText = "Para poder criar seus treinos é necessário se registrar primeiro.";
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("theme-toggle")
+    const root = document.documentElement
+
+    let temaAtual = "dark"
+
+    function aplicarTema(tema) {
+        if (tema === "light") {
+            root.setAttribute("data-theme", "light")
+        } else {
+            root.removeAttribute("data-theme")
+        }
+    }
+
+    toggle.addEventListener("click", () => {
+        temaAtual = temaAtual === "dark" ? "light" : "dark"
+        aplicarTema(temaAtual)
+    })
+})
+

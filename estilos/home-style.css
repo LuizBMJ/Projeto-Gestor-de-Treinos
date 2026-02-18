@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --cor-principal: #FBB600;
     --cor-secundaria: #FA1900; 
@@ -23,24 +25,27 @@ body {
     width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     background-color: var(--cor-preto-suave);
     color: var(--cor-texto-principal);
+    position: relative;
 }
 
 /* HEADER */
 
 header {
     background-color: #1a1a1a;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-between;
     padding: 15px 5%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 header h1 {
     color: var(--cor-texto-principal);
+    font-size: 1.8em;
     font-weight: 500;
 }
 
@@ -71,19 +76,95 @@ header h1 {
 
 /* Perfil */
 
+#perfil-wrapper {
+    position: relative;
+}
+
+#perfil-wrapper:hover #perfil-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
 #perfil {
     background-color: var(--cor-principal);
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.3s ease;
+    overflow: hidden;
 }
 
 #perfil:hover {
     transform: scale(1.05);
     background-color: var(--cor-terciaria);
 }
+
+#perfil img {
+    width: 45px;
+}
+
+#perfil-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    width: 160px;
+    padding-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.25s ease;
+
+    z-index: 10;
+
+}
+
+#perfil-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 15px;
+
+    width: 12px;
+    height: 12px;
+    background-color: #1a1a1a;
+    transform: rotate(45deg);
+
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+#perfil-menu a {
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--cor-texto-secundaria);
+    font-size: 14px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#perfil-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--cor-principal);
+}
+
+#perfil-menu .logout {
+    color: var(--cor-secundaria);
+}
+
+
+
 
 /* MAIN */
 

@@ -25,6 +25,10 @@
 /* Tablets / telas médias */
 @media screen and (min-width: 768px) {
 
+    .menu-icon {
+    width: 30px;
+    }
+
     #container-home {
         max-width: 400px;
     }
@@ -51,6 +55,10 @@
         grid-template-columns: auto 45% 45% auto;
         grid-template-rows: auto;
         align-items: center;
+    }
+
+    .menu-icon {
+    width: 34px;
     }
 
     #container-home {

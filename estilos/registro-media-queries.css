@@ -4,7 +4,7 @@
 @media screen and (max-width: 360px) {
 
     main {
-    gap: 20px;
+        gap: 20px;
     }
 
     #container-home h1 {
@@ -26,22 +26,19 @@
 @media screen and (min-width: 768px) {
 
     .menu-icon {
-    width: 30px;
+        width: 30px;
     }
 
     #container-home {
-        max-width: 400px;
+        max-width: 500px;
     }
 
     .registros {
-        max-width: 400px;
+        max-width: 500px;
         background: rgba(255, 255, 255, 0.06);
         border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .formulario p {
-        max-width: 400px;
-    }
 }
 
 /* Desktop padrão */
@@ -55,10 +52,6 @@
         grid-template-columns: auto 45% 45% auto;
         grid-template-rows: auto;
         align-items: center;
-    }
-
-    .menu-icon {
-    width: 34px;
     }
 
     #container-home {
@@ -80,7 +73,7 @@
     .registros {
         grid-row: auto;
         grid-column: 3;
-        max-width: 460px;
+        max-width: 520px;
     }
 
     .registros h1 {
@@ -88,27 +81,32 @@
         font-size: 2.4em;
     }
 
-    .formulario p {
-        max-width: 460px;
+    .formulario input[type="text"],
+    .formulario input[type="password"],
+    .formulario input[type="email"] {
+        font-size: 0.9em;
+    }
+
+    .formulario p.user input {
+        height: 50px;
     }
 
     .formulario p.remember-me,
     .formulario p.questions {
         color: var(--cor-texto-secundaria);
+        font-size: 1em;
     }
 
     .formulario p.questions a {
         color: var(--cor-principal);
     }
 
-    .formulario p.questions {
-        font-size: 0.9em;
-    }
-
     .formulario p.send input {
-        width: 120px;
+        width: 110px;
+        height: 45px;
+        font-size: 0.85em;
         background-color: var(--cor-principal);
-        color: var(--cor-preto-suave);
+        color: var(--cor-preto-suave);  
         transition: transform 0.3s ease;
     }
 
@@ -142,13 +140,4 @@
         max-width: 560px;
     }
 
-    .formulario p {
-        max-width: 560px;
-    }
-
-    .formulario p.send input {
-        width: 140px;
-        height: 42px;
-        background-color: var(--cor-principal);
-    }
 }
